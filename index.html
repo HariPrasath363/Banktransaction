@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bank Transaction</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Bank Transaction</h1>
+        
+        <div class="pin-verification">
+            <input type="password" id="pin" placeholder="Enter PIN">
+            <button onclick="verifyPin()">Verify PIN</button>
+        </div>
+        
+        <div class="content" id="content" style="display:none;">
+            <div class="balance">
+                <h2>Current Balance: Rs<span id="balance">0.00</span></h2>
+            </div>
+            <div class="transaction">
+                <input type="number" id="amount" placeholder="Enter amount">
+                <button onclick="deposit()">Deposit</button>
+                <button onclick="withdraw()">Withdraw</button>
+            </div>
+            <div class="history">
+                <h2>Transaction History</h2>
+                <ul id="transaction-history"></ul>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
